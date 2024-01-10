@@ -26,12 +26,12 @@ export function Navbar() {
         { items: [{name: "Shop", href: "/shop"}]},
     ]
     return (
-        <nav className="h-20 w-full bg-[#92d0da] px-36 py-2 flex justify-between">
+        <nav className="h-24 w-full bg-[#92d0da] px-36 py-2 flex justify-between">
             <img src="/logo/transparent-white.png" alt="" className="" />
             <div className="text-center flex justify-end align-middle">
 
                 {nav.map(i => {
-                    if (i.items.length === 1) return <a className="pl-8 my-auto font-extralight" href={i.items[0]?.href}>{i.items[0]?.name}</a>
+                    if (i.items.length === 1) return <a className="pl-8 my-auto font-extralight uppercase text-xs" href={i.items[0]?.href}>{i.items[0]?.name}</a>
         
                     return (
                         i.name ? <Dropdown name={i.name} items={i.items} /> : ""
